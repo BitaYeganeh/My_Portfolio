@@ -1,0 +1,224 @@
+/* Global styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+ 
+}
+#hero img.profile-photo {
+  border-radius: 8px;
+  object-fit: cover;
+  height:auto;
+  max-width: 300px;
+
+}
+
+.container {
+  width: 80%;        /* Adjust width to control how wide your content is */
+  max-width: 1000px; /* You can set a max width for larger screens */
+  padding: 20px;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to give it a box effect */
+  border-radius: 8px;  /* Optional: Rounded corners */
+  margin: 0 auto;
+}
+
+.intro-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  
+}
+
+/* Make hero and about share the width */
+#hero,
+#about {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+#hero {
+  background-color: #e9f7fd;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px; /* Optional: adjust to your design */
+  background-image: url("/p.stuff/cv\ image.jpeg");
+  background-size:center;
+  background-repeat: no-repeat;   /* stops repeating/mirroring */
+  background-position: center;
+  
+}
+.hero-inner{
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+  gap:20px;
+  flex-direction: column;
+}
+.hero-content {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  background-color: rgb(28, 100, 136);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+header {
+  background-color:  rgb(28, 100, 136);
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+header p{
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+h2{
+  color: rgb(28, 100, 136);
+
+}
+
+/* About Section */
+#about {
+  
+  padding: 30px ;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.bold-text,strong {
+  font-weight: bold;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+
+
+/* Skills Section */
+#skills {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  font-size: 1.2rem;
+  padding: 5px 0;
+}
+
+/* Experience Section */
+#experience {
+  background-color: #e9f7fd;
+
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.experience-item h4 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.experience-item p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Education Section */
+#education {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.education-item h3 {
+  font-size: 1.4rem;
+}
+
+.education-item p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #e9f7fd;
+  padding: 20px;
+}
+
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(28, 100, 136);
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/* ADD RESPONSIVE DESIGN-------------------------------*/
+/* ------------------قانون اصلی ------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+/* تبلت */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+
+  section {
+    padding: 15px;
+  }
+
+  .experience-item h4,
+  .education-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* موبایل */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
