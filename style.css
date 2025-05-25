@@ -7,12 +7,25 @@ body {
   color: #333;
  
 }
+@media (max-width: 768px) {
+  .intro-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  #hero, #about {
+    max-width: 100%;
+  }
+}
 #hero img.profile-photo {
   border-radius: 8px;
   object-fit: cover;
   height:auto;
   max-width: 300px;
 
+}
+/* to have smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -46,7 +59,7 @@ body {
   padding: 20px;
   width: 100%;
   max-width: 300px; /* Optional: adjust to your design */
-  background-image: url("/p.stuff/cv\ image.jpeg");
+  background-image: url('images/cv-image.jpeg');
   background-size:center;
   background-repeat: no-repeat;   /* stops repeating/mirroring */
   background-position: center;
@@ -221,4 +234,58 @@ footer p {
     font-size: 0.9rem;
     padding: 8px 10px;
   }
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+.close:hover {
+  color: black;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-buttons {
+  text-align: center;
+  margin: 30px 0;
+}
+.modal-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: rgb(28, 100, 136);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.modal-buttons button:hover {
+  background-color: #1b678b;
 }
