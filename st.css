@@ -1,6 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
+  padding-top: 0; /* match your fixed header height */
   font-family: Arial, sans-serif;
 }
 
@@ -49,6 +50,7 @@ body.dark-mode {
   justify-content: flex-end;
   align-items: center;
   padding: 2rem;
+  padding-top: 80px;
   box-sizing: border-box;
   overflow: hidden;
   background-color: #eaedf4; /* in case image doesn't cover fully */
@@ -88,8 +90,11 @@ body.dark-mode {
 .main-header {
   position: fixed;
   top: 0;
+  left:0;
   width: 100%;
+  height: 80px;
   padding: 20px 40px;
+  z-index:999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,6 +115,30 @@ body.dark-mode {
 .nav-links a:hover {
   color:rgba(15, 34, 163, 0.7); /* gold on hover */
 }
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 1;
+}
+
 
 /* ===== Responsive for Tablets and Mobile Devices ===== */
 @media (max-width: 768px) {
@@ -232,7 +261,10 @@ body.dark-mode .projects-section {
 }
 /*    FORM   */
 .contact-section {
+  overflow: auto;
   padding: 4rem 2rem;
+  padding-top: 3rem;
+  border-top: 1px solid transparent; /* forces margin containment */
   background-size: 30%;
   background-position: center;
   background-repeat: no-repeat;
@@ -242,12 +274,13 @@ body.dark-mode .projects-section {
 
 .contact-section h2 {
   text-align: center;
+  margin-top: 0;
   margin-bottom: 2rem;
-   color: rgb(67, 65, 165);
+  color: rgb(67, 65, 165);
 }
 
 .form-wrapper {
-  background-color:rgb(215, 200, 200); /* semi-transparent overlay */
+  background-color:rgb(243, 226, 226); /* semi-transparent overlay */
   max-width: 300px;
   margin: 0 auto;
   padding: 2rem;
@@ -269,6 +302,7 @@ body.dark-mode .projects-section {
 .contact-form input,
 .contact-form textarea {
   padding: 10px;
+  margin: 0 auto; 
   font-size: 1rem;
   border-radius: 5px;
   border: none;
@@ -280,12 +314,13 @@ body.dark-mode .projects-section {
   background-color: #6596ec;
   color: white;
   padding: 10px;
-  font-size: large;
-
+   margin: 0 auto; 
+  width:40%;
+  font-size:16px;
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  cursor: pointer;
+  cursor:pointer;
   transition: background-color 0.3s ease;
 }
 
