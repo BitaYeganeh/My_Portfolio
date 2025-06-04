@@ -43,3 +43,26 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+
+// Get the modal and header link
+const skillsModal = document.getElementById("skillsModal");
+const skillsLink = document.getElementById("skillsLink");
+
+// Open modal on header link click
+skillsLink.addEventListener("click", function(e) {
+  e.preventDefault(); // Prevent page jump
+  skillsModal.style.display = "block";
+});
+
+// Close modal on outside click
+window.addEventListener("click", function(e) {
+  if (e.target === skillsModal) {
+    skillsModal.style.display = "none";
+  }
+});
+const closeBtn = document.querySelector(".close-btn");
+closeBtn.onclick = () => {
+  skillsModal.style.display = "none";
+};
+
+

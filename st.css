@@ -5,7 +5,9 @@ body, html {
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
 }
-
+html {
+  scroll-padding-top: 80px; /* height of your fixed header */
+}
 /* Default styles already apply to light mode */
 body.light-mode {
   background-color: #f0f0f0;
@@ -162,6 +164,8 @@ body.dark-mode {
              blink 0.7s step-end infinite;
 }
 
+
+
 @keyframes typewriter-loop {
   0% { width: 0 }
   40% { width: 100% }
@@ -190,8 +194,66 @@ body.dark-mode {
 .about-text {
   flex: 1;
 }
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+#skillsModal h2 {
+  color:rgba(15, 34, 163, 0.7);
+}
 
 
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.skills-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Dark mode modal styles */
+body.dark-mode #skillsModal .modal-content {
+  background-color: #1f260d;
+  color: white;
+}
+
+body.dark-mode #skillsModal h2 {
+  color: red;
+}
+
+body.dark-mode #skillsModal .close-btn {
+  color: white;
+}
 /* ===== Responsive for Tablets and Mobile Devices ===== */
 @media (max-width: 768px) {
   body {
@@ -413,9 +475,17 @@ body.dark-mode .projects-section {
 .submit-button:hover {
   background-color: #c20808;
 }
+
+body.light-mode .form-wrapper {
+  background-color: rgb(243, 226, 226);
+  border: 2px solid #6596ec; 
+}
+
 /* DARK MODE FORM*/
 body.dark-mode .form-wrapper {
   background-color:#222;
+    border: 2px solid white
+
 }
 
 body.dark-mode .contact-form input,
