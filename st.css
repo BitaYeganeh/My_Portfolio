@@ -8,6 +8,7 @@ body, html {
 html {
   scroll-padding-top: 80px; /* height of your fixed header */
 }
+
 /* Default styles already apply to light mode */
 body.light-mode {
   background-color: #f0f0f0;
@@ -36,7 +37,7 @@ body.dark-mode {
 }
 
 .hero-button.dark-mode {
-  background-color:  #4f0202;
+  background-color:  rgba(15, 34, 163, 0.7);
   color: white;
 }
 .hero-button.dark-mode:hover {
@@ -117,6 +118,9 @@ body.dark-mode {
 
 .nav-links a:hover {
   color:rgba(15, 34, 163, 0.7); /* gold on hover */
+}
+body.dark-mode .nav-links a:hover {
+  color: white;
 }
 #about{
  
@@ -378,7 +382,7 @@ body.dark-mode #backToTop {
 }
 
 body.dark-mode .projects-section {
-  background-color: #222;
+  background-color: #1f260d;
   color: #eee;
 }
 
@@ -410,12 +414,12 @@ body.dark-mode .projects-section {
 
 /*   Education:   */
 #education {
-  padding: 4rem 2rem;
+  padding: 4rem 4rem;
   text-align: left;
-  background-color: rgba(228, 207, 207, 0.455);
+  background-color:#e0e0e0;
 }
 body.dark-mode #education {
-  background-color: #222;
+  background-color:#1f260d;
   color: #eee;
 }
 #education h3 {
@@ -425,7 +429,7 @@ body.dark-mode #education {
 }
 
 body.dark-mode #education h3 {
-  color: #fca5a5; /* softer highlight in dark mode */
+  color: rgb(67, 65, 165);
 }
 .education-item {
   max-width: 800px;
@@ -439,7 +443,7 @@ body.dark-mode #education h3 {
   line-height: 1.6;
 }
 body.dark-mode .education-item {
-  background-color: rgba(31, 38, 13, 0.9);
+  background-color:#4f0202;
   color: #e0e0e0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
@@ -528,6 +532,14 @@ body.dark-mode .education-item {
 .submit-button:hover {
   background-color: #c20808;
 }
+.confirmation-message {
+  display: none;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
 
 body.light-mode .form-wrapper {
   background-color: rgb(243, 226, 226);

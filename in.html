@@ -39,7 +39,7 @@
     <h2>About Me</h2>
     <div class="about-container">
 
-       <!-- 🟦 Wrap image + animation -->
+       <!-- Wrap image + animation -->
     <div class="profile-wrapper">
       <img src="images/cv image.jpeg" alt="Bita Yeganeh Profile Photo" class="profile-image">
       <p class="typewriter">Front-End Enthusiast & Code Explorer</p>
@@ -72,7 +72,7 @@
 </div>
 
 
-    <button id="backToTop" title="Go to top">Top⬆️</button>
+    <button id="backToTop" title="Go to top">Top ⬆️</button>
 
 
     <section id="projects" class="projects-section">
@@ -108,8 +108,9 @@
       <section id="education">
         <h3>Education</h3>
         <div class="education-item">
-          <p>- Electronic Engineering - 2009, Iran</p>
-          <p>- Web Developer 2025 - Business College Helsinki (with a focus on WordPress, PHP, and React)</p>
+          <p>- Electronic Engineering - 2009, Iran</p><br>
+          <p>- Web Developer Training Program (March 2025 – Present) – Business College Helsinki</p>
+          <p>(Focus: WordPress, PHP, and React)</p>
         </div>
       </section>
 
@@ -126,7 +127,7 @@
 <section id="contact" class="contact-section">
   <h2>Contact Me</h2>
   <div class="form-wrapper">
-    <form class="contact-form" action="#" method="post">
+    <form class="contact-form" onsubmit="showConfirmation(event)">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
@@ -140,7 +141,11 @@
       <textarea id="message" name="message" rows="5" required></textarea>
 
       <button type="submit" class="submit-button">Send</button>
+      <p id="confirmationMessage" class="confirmation-message">
+    Your message has been sent!
+</p>
     </form>
+    
   </div>
 </section>
 

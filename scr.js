@@ -66,3 +66,10 @@ closeBtn.onclick = () => {
 };
 
 
+// messafe for the form sending
+function showConfirmation(event) {
+  event.preventDefault(); // Prevent the default form submission
+  alert("✅ Your message has been sent!");
+  document.querySelector(".contact-form").reset(); // Clear the form
+}
+
