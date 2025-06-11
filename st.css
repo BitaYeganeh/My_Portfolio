@@ -13,7 +13,7 @@ body.light-mode {
   background-color: #f0f0f0;
   color: #222;
 }
-
+/* 🌙 Dark mode */
 body.dark-mode {
   background-color:#1f260d;
   color: #e0e0e0;
@@ -407,6 +407,59 @@ body.dark-mode .projects-section {
 .project-item img:hover {
   transform: scale(1.05);
 }
+
+/*   Education:   */
+#education {
+  padding: 4rem 2rem;
+  text-align: left;
+  background-color: rgba(228, 207, 207, 0.455);
+}
+body.dark-mode #education {
+  background-color: #222;
+  color: #eee;
+}
+#education h3 {
+  font-size: 2rem;
+  margin-top:0.2rem;
+  color: rgb(67, 65, 165);
+}
+
+body.dark-mode #education h3 {
+  color: #fca5a5; /* softer highlight in dark mode */
+}
+.education-item {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+body.dark-mode .education-item {
+  background-color: rgba(31, 38, 13, 0.9);
+  color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+@media (max-width: 768px) {
+  #education {
+    padding: 2rem 1rem;
+  }
+
+  .education-item {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
 /*    FORM   */
 .contact-section {
   overflow: auto;
