@@ -412,6 +412,11 @@ body.dark-mode .projects-section {
 .project-item img:hover {
   transform: scale(1.05);
 }
+.projects-section {
+  max-width: 1000px;  /* Set the overall width */
+  margin: 0 auto;     /* Center the section horizontally */
+  padding: 25px 20px; /* Top/bottom and left/right padding */
+}
 
 
 /*   Education:   */
