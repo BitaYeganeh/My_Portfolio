@@ -1,181 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bita Yeganeh Portfolio</title>
+  <meta name="description" content="Portfolio of Bita Yeganeh - Front-end developer, showcasing projects, skills, education, and contact information.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
 <header class="main-header" id="mainHeader">
   <div class="logo">Bita Yeganeh</div>
-  <!-- header -->
   <nav class="nav-links">
-    <a href="#about">About</a>
+    <a href="#about">About Me</a>
     <a href="#" id="skillsLink">Skills</a>
     <a href="#education">Education</a>
-    <a href="#contact">Contact Me</a>
     <a href="#projects">Projects</a>
-
+    <a href="#contact">Contact Me</a>
   </nav>
-   <button id="modeToggle" class="mode-toggle">🌙</button>
+  <button id="modeToggle" class="mode-toggle" aria-label="Toggle dark/light mode">🌙</button>
 </header>
 
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to my Portfolio</h1>
+      <p>Digital Dream Crafter Through Code</p>
+      <a href="#about" class="hero-button">See More</a>
+    </div>
+  </section>
 
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to my Portfolio</h1>
-            <p>Digital Dream Crafter Through Code</p>
-            <a href="#about" class="hero-button">See More</a>
-        </div>
-    </section>
-     <!-- Example Next Section -->
   <section id="about">
     <h2>About Me</h2>
     <div class="about-container">
-
-       <!-- Wrap image + animation -->
-    <div class="profile-wrapper">
-      <img src="images/cv image.jpeg" alt="Bita Yeganeh Profile Photo" class="profile-image">
-      <p class="typewriter">Front-End Enthusiast & Code Explorer</p>
+      <div class="profile-wrapper">
+        <img src="images/cv image.jpeg" alt="Bita Yeganeh Profile Photo" class="profile-image" loading="lazy">
+        <p class="typewriter">Front-End Enthusiast & Code Explorer</p>
+      </div>
+      <div class="about-text">
+        <p>I'm a passionate web development student at <span class="bold-text">Business College Helsinki</span>, diving deep into modern front-end development.</p>
+        <p>My current focus is mastering HTML, CSS, and JavaScript. Collaboration is key — I enjoy working in teams, exchanging ideas, and learning by doing.</p>
+        <p>Beyond technical skills, I’m passionate about <strong>problem-solving</strong> and hands-on projects. Every project is a chance to explore, learn, and improve.</p>
+        <p>Next, I’m looking forward to diving into <strong>React</strong>, strengthening my Git skills, and becoming more confident with modern development workflows.</p>
+      </div>
     </div>
-    <div class="about-text">
-    <p>I'm a passionate web development student at <span class="bold-text">Business College Helsinki</span>, where I’m diving deep into the fundamentals of modern front-end development.</p>
-    <p>My current focus is on mastering HTML, CSS, and JavaScript. Collaboration is at the heart of how I grow. I enjoy working in teams, bouncing around ideas, and learning from feedback and <strong>learning by donig.</strong>.</p>
-    <p>Beyond the technical side, I’m passionate about <strong>problem-solving</strong> and learning through hands-on projects. I believe the best way to grow is by building real things. Every new project is an opportunity to explore, make mistakes, and improve.</p>
-    <p>I enjoy working in teams, sharing ideas, and gaining feedback from peers and mentors. I value clear communication, curiosity, and staying open to new tools and ways of thinking.</p>
-    <p>Next, I’m looking forward to diving into <strong>React</strong>, strengthening my skills with Git, and becoming more confident with version control and modern development workflows.</p> 
-    </div>
-    </div>
-  
   </section>
- 
 
-<!-- Modal -->
-<div id="skillsModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>My Skills</h2>
-    <ul class="skills-list">
-      <li>HTML5</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Git & GitHub</li>
-      <li>WordPress, PHP & React(soon)</li>
-    </ul>
+  <!-- Skills Modal -->
+  <div id="skillsModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="skillsTitle">
+    <div class="modal-content">
+      <span class="close-btn" role="button" tabindex="0" aria-label="Close modal">&times;</span>
+      <h2 id="skillsTitle">My Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git & GitHub</li>
+        <li>WordPress, PHP & React (soon)</li>
+      </ul>
+    </div>
   </div>
-</div>
 
+  <button id="backToTop" title="Go to top">Top ⬆️</button>
 
-    <button id="backToTop" title="Go to top">Top ⬆️</button>
-
-
-<section id="projects" class="projects-section">
-  <h2>Projects</h2>
-  <div class="projects-grid">
-    
-    <div class="project-item">
-      <a href="https://github.com/BitaYeganeh/HTML_School/tree/main/JS/07-viikko/Eläintarha" target="_blank">
-        <img src="images/project1.png" alt="Project 1">
-      </a>
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-item">
+        <a href="https://github.com/BitaYeganeh/HTML_School/tree/main/JS/07-viikko/Eläintarha" target="_blank" rel="noopener noreferrer">
+          <img src="images/project1.png" alt="Eläintarha JavaScript Project" loading="lazy">
+        </a>
+      </div>
+      <div class="project-item">
+        <a href="https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku" target="_blank" rel="noopener noreferrer">
+          <img src="images/project2.png" alt="Pancake Order Project" loading="lazy">
+        </a>
+      </div>
+      <div class="project-item">
+        <a href="https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku" target="_blank" rel="noopener noreferrer">
+          <img src="images/project3.png" alt="Pancake Project 2" loading="lazy">
+        </a>
+      </div>
+      <div class="project-item">
+        <a href="https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti" target="_blank" rel="noopener noreferrer">
+          <img src="images/project4.png" alt="Flexbox Layout Project" loading="lazy">
+        </a>
+      </div>
+      <div class="project-item">
+        <a href="https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti" target="_blank" rel="noopener noreferrer">
+          <img src="images/project5.png" alt="Flexbox Project 2" loading="lazy">
+        </a>
+      </div>
+      <div class="project-item">
+        <a href="https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti" target="_blank" rel="noopener noreferrer">
+          <img src="images/project6.png" alt="Flexbox Project 3" loading="lazy">
+        </a>
+      </div>
+      <div class="project-item">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="images/project7.png" alt="Project 7 placeholder" loading="lazy">
+        </a>
+      </div>
+      <div class="project-item">
+        <a href="https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/base-apparel-coming-soon-master" target="_blank" rel="noopener noreferrer">
+          <img src="images/project8.png" alt="Base Apparel Coming Soon Project" loading="lazy">
+        </a>
+      </div>
+      <div class="project-item">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="images/project9.png" alt="Project 9 placeholder" loading="lazy">
+        </a>
+      </div>
     </div>
+  </section>
 
-    <div class="project-item">
-      <a href="https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku" target="_blank">
-        <img src="images/project2.png" alt="Project 2">
-      </a>
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-item">
+      <p>- Electronic Engineering - 2009, Iran</p>
+      <p>- Web Developer Training Program (March 2025 – Present) – Business College Helsinki</p>
+      <p>(Focus: WordPress, PHP, and React)</p>
     </div>
+  </section>
 
-    <div class="project-item">
-      <a href="https://github.com/BitaYeganeh/Summer-tasks/tree/main/Pannukakku" target="_blank">
-        <img src="images/project3.png" alt="Project 3">
-      </a>
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="form-wrapper">
+      <form class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="submit-button">Send</button>
+        <p id="confirmationMessage" class="confirmation-message" hidden>
+          Your message has been sent!
+        </p>
+      </form>
     </div>
-
-    <div class="project-item">
-      <a href="https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti" target="_blank">
-        <img src="images/project4.png" alt="Project 4">
-      </a>
-    </div>
-
-    <div class="project-item">
-      <a href="https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti" target="_blank">
-        <img src="images/project5.png" alt="Project 5">
-      </a>
-    </div>
-
-    <div class="project-item">
-      <a href="https://github.com/BitaYeganeh/HTML_School/tree/main/HTML-KURSSI/06-viikko/01_flex-projekti" target="_blank">
-        <img src="images/project6.png" alt="Project 6">
-      </a>
-    </div>
-
-    <div class="project-item">
-      <a href="#" target="_blank">
-        <img src="images/project7.png" alt="Project 7">
-      </a>
-    </div>
-
-    <div class="project-item">
-      <a href="https://github.com/BitaYeganeh/Summer-tasks/tree/main/FrontendMentor/base-apparel-coming-soon-master" target="_blank">
-        <img src="images/project8.png" alt="Project 8">
-      </a>
-    </div>
-     <div class="project-item">
-      <a href="#" target="_blank">
-        <img src="images/project9.png" alt="Project 9">
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-<!--- Education -->
-      <section id="education">
-        <h3>Education</h3>
-        <div class="education-item">
-          <p>- Electronic Engineering - 2009, Iran</p>
-          <p>- Web Developer Training Program (March 2025 – Present) – Business College Helsinki</p>
-          <p>(Focus: WordPress, PHP, and React)</p>
-        </div>
-      </section>
-
-<!--- FORM -->
-<section id="contact" class="contact-section">
-  <h2>Contact Me</h2>
-  <div class="form-wrapper">
-    <form class="contact-form" onsubmit="showConfirmation(event)">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone">
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit" class="submit-button">Send</button>
-      <p id="confirmationMessage" class="confirmation-message">
-    Your message has been sent!
-</p>
-    </form>
-    
-  </div>
-</section>
+  </section>
+</main>
 
 <footer class="footer">
   <p>© 2025 Bita Yeganeh</p>
 </footer>
 
+<script src="script.js" defer></script>
 </body>
-<script src="script.js"></script>
 </html>
