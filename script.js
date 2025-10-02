@@ -94,3 +94,4 @@ function showConfirmation(event) {
 // Attach event listener from JS instead of inline HTML
 const contactForm = document.querySelector(".contact-form");
 contactForm.addEventListener("submit", showConfirmation);
+

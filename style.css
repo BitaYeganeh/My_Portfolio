@@ -371,3 +371,31 @@ body.dark-mode .footer { background-color: #4f0202; }
   .hero { background-size: contain; background-image: none; background-color: #dde2ea; }
   .project-item { width: 100%; }
 }
+/* style.css - add at the bottom */
+@media screen and (max-width: 600px) {
+  .main-header {
+    padding: 10px 15px; /* Reduce header padding */
+    flex-direction: column; /* Stack logo + nav */
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Slightly smaller logo */
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 8px 0; /* Reduce vertical space */
+    font-size: 14px; /* Smaller font for mobile */
+  }
+
+  #modeToggle {
+    margin-top: 10px; /* keep button spaced nicely */
+  }
+}
