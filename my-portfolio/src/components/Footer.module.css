@@ -1,0 +1,27 @@
+.footer {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #6596ec;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.footerLink {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footerLink:hover {
+  color: #c20808;
+}
+
+/* Dark mode */
+body.dark-mode .footer {
+  background-color: #4f0202;
+  color: #f0f0f0;
+}
+
+body.dark-mode .footerLink {
+  color: #f0f0f0;
+}
